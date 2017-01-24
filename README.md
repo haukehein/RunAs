@@ -1,6 +1,19 @@
-# Admin-Batch_Clone
-This is a clone of Admin-Batch (http://www.itninja.com/blog/view/batch-run-as-administrator-automatically-with-highest-privileges-by-tools-batch-admin)
+#A modified version of phusion/passenger-customizable
 
-See "Documentation.html" for details.
+This is a modified version of https://github.com/haukehein/Admin-Batch_Clone
 
-Batch_Admin is a script written by Artur Zgadzaj (original see:  http://www.itninja.com/blog/view/batch-run-as-administrator-automatically-with-highest-privileges-by-tools-batch-admin). It allows to automatically elevate the Administrator for use in any type of Batch own script, or BAT or .CMD or any program EXE or any internal system command. This function ensures the work on a standard environment, with standard tools and in the same way in different Windows systems. It uses several standard and built-in Windows commands. Do not use any other external scripts. It can be used to call any program as Administrator, not just scripts Batch. It suffices to create a small script, which then call the program that requires permission Administartor. 
+There's nothing wrong with the Admin-Batch_Clone (it's really good!). This contains some modifications (updates) because I personally find useful. Admin-Batch_Clone is a clone of Admin-Batch (http://www.itninja.com/blog/view/batch-run-as-administrator-automatically-with-highest-privileges-by-tools-batch-admin)
+
+### runas_admin.cmd
+
+The batch file executes a command (or an .exe-file) along with arguments using administrator privileges.
+
+
+### runas_system.cmd
+
+The batch file executes a command (or an .exe-file) along with arguments using system privileges(!).
+
+
+### admindo.cmd
+
+This is a renamed and modified version of earlier admin-batch.bat file.

@@ -19,3 +19,8 @@ The batch file executes a command (or an .exe-file) along with arguments using s
 This is a renamed and modified version of earlier BATCH-ADMIN.BAT file.
 
 
+## Pleas note
+
+The batch file "runas_system.cmd" requires the file "PsExec.exe" of the Sysinternals suite from Microsoft. (Download: https://technet.microsoft.com/en-us/sysinternals/pxexec.aspx)
+
+

@@ -1,6 +1,4 @@
-#A modified version of phusion/passenger-customizable
-
-This is a modified version of https://github.com/haukehein/Batch-Admin_Clone
+#This is a modified version of https://github.com/haukehein/Batch-Admin_Clone
 
 There's nothing wrong with the Batch-Admin_Clone (it's really good!). This contains some modifications (updates) because I personally find useful.Batch-Admin_Clone is a clone of Batch-Admin (http://www.itninja.com/blog/view/batch-run-as-administrator-automatically-with-highest-privileges-by-tools-batch-admin)
 

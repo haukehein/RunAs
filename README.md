@@ -21,6 +21,7 @@ This is a renamed and modified version of earlier BATCH-ADMIN.BAT file.
 
 ## Pleas note
 
-The batch file "runas_system.cmd" requires the file "PsExec.exe" of the Sysinternals suite from Microsoft. (Download: https://technet.microsoft.com/en-us/sysinternals/pxexec.aspx)
+The batch file "runas_system.cmd" requires the file "PsExec.exe" of the Sysinternals-Suite from Microsoft installed inthe Windwos' System32 or SysWOW64 folder.
+(Download: https://technet.microsoft.com/en-us/sysinternals/pxexec.aspx)
 
 

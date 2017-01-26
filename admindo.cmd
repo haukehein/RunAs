@@ -1,3 +1,31 @@
+: # This is a special script which intermixes both Bash and CMD.EXE code. It
+: # is written this way because it is used in system() shell-outs directly in 
+: # otherwise portable code. See http://stackoverflow.com/questions/17510688
+: # for details.
+: #
+: ##############################################################################
+: #                                                                            #
+: #  (call) admindo.cmd  <command>  [<arguments>]                              #
+: #  (call) admindo.cmd  <exefile>  [<arguments>]                              #
+: #                                                                            #
+: #  Executes a <command> (or an Windows' <exefile>) along with <arguments>    #
+: #  using administrator privileges (the user group 'ADMINISTRATORS').         #
+: #  !!! See the file "Documentation.html" for details. !!!                    #
+: #                                                                            #
+: ##############################################################################
+
+
+: <<"::CMDLITERAL"
+@echo off & goto :CMDSCRIPT
+::CMDLITERAL
+
+#BASHSCRIPT
+  echo "::: $SHELL :::"
+  cmd /C "$( cygpath --windows --absolute "$0" )" $@
+  exit
+
+
+:CMDSCRIPT
 @echo off
 
 :: Source: http://www.itninja.com/blog/view/batch-run-as-administrator-automatically-with-highest-privileges-by-tools-batch-admin

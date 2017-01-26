@@ -18,8 +18,8 @@
 ::CMDLITERAL
 
 #BASHSCRIPT
-  echo "::: $SHELL :::"
-  cmd /C "$( cygpath --windows --absolute "$0" )" $@
+  [[ ! "${OSTYPE}:0:6" =~ "cygwin" ]] && echo "[$( basename "$0" )]: Abort! Cygwin was not detected." >&2 && exit 1
+  cmd /D/C "$( cygpath --windows --absolute "$0" )" $@
   exit
 
 
@@ -96,7 +96,7 @@ setlocal DisableDelayedExpansion
   echo @echo off > "%TEMP%\%Admin_Name%_start.bat"
   ::
   :: sometimes needed, if running form a VirtualBox shared drive
-  for /f "tokens=1-2" %%A in ('net use 2^>nul ^| find ^"\\^" ^| find /i "%~d0"') do if not [%%A]==[] (echo net use %%A %%B ^>nul 2^>nul >> "%TEMP%\%Admin_Name%_start.bat")
+  for /f "tokens=1-2" %%A in ('net use 2^>nul ^| findstr ^"\\^" ^| findstr /i "%~d0"') do if not [%%A]==[] (echo net use %%A %%B ^>nul 2^>nul >> "%TEMP%\%Admin_Name%_start.bat")
   ::
   echo setlocal DisableDelayedExpansion >> "%TEMP%\%Admin_Name%_start.bat"
   if not defined $Admin_Temp  echo SET TEMP^>^>"%TEMP%\%Admin_Name%__Set.txt">> "%TEMP%\%Admin_Name%_start.bat"

@@ -21,6 +21,7 @@
 ::CMDLITERAL
 
 #BASHSCRIPT
+  [[ ! "${OSTYPE}:0:6" =~ "cygwin" ]] && echo "[$( basename "$0" )]: Abort! Cygwin was not detected." >&2 && exit 1
   cmd /D/C "$( cygpath --windows --absolute "$0" )" $@
   exit
 

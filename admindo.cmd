@@ -13,8 +13,6 @@
 : #  !!! See the file "Documentation.html" for details. !!!                    #
 : #                                                                            #
 : ##############################################################################
-
-
 : <<"::CMDLITERAL"
 @echo off & goto :CMDSCRIPT
 ::CMDLITERAL
@@ -29,7 +27,7 @@
 @echo off
 
 :: Source: http://www.itninja.com/blog/view/batch-run-as-administrator-automatically-with-highest-privileges-by-tools-batch-admin
-:: I edited and renamed the "Admin_Batch.bat" to "admindo.cmd". (jr-2016/05/18)
+:: I edited and renamed the "Batch_Admin.bat" to "AdminDo.cmd" . (jr-2016/05/18)
 ::
 :: Usage:
 ::   net session >NUL 2>NUL&if errorlevel 1  ADMINDO "%~0" %*
